@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19325" started-at="2019-11-11T18:37:43 EST" finished-at="2019-11-11T18:38:03 EST">
+  <suite name="Suite" duration-ms="218807" started-at="2019-11-11T21:24:17 EST" finished-at="2019-11-11T21:27:56 EST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19325" started-at="2019-11-11T18:37:43 EST" finished-at="2019-11-11T18:38:03 EST">
-      <class name="remoteTesting.dockerValidation.stopDocker">
-        <test-method status="PASS" signature="startFile()[pri:0, instance:remoteTesting.dockerValidation.stopDocker@4b4523f8]" name="startFile" duration-ms="18903" started-at="2019-11-11T18:37:44 EST" finished-at="2019-11-11T18:38:02 EST">
+    <test name="Test" duration-ms="218807" started-at="2019-11-11T21:24:17 EST" finished-at="2019-11-11T21:27:56 EST">
+      <class name="remoteTesting.dockerValidation.chromeTest1">
+        <test-method status="PASS" signature="startDockerScale()[pri:0, instance:remoteTesting.dockerValidation.chromeTest1@23e028a9]" name="startDockerScale" is-config="true" duration-ms="90897" started-at="2019-11-11T21:24:17 EST" finished-at="2019-11-11T21:25:48 EST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startFile -->
-      </class> <!-- remoteTesting.dockerValidation.stopDocker -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- startDockerScale -->
+        <test-method status="PASS" signature="test1()[pri:0, instance:remoteTesting.dockerValidation.chromeTest1@23e028a9]" name="test1" duration-ms="81063" started-at="2019-11-11T21:25:48 EST" finished-at="2019-11-11T21:27:10 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method status="PASS" signature="stopDockerDeleteFile()[pri:0, instance:remoteTesting.dockerValidation.chromeTest1@23e028a9]" name="stopDockerDeleteFile" is-config="true" duration-ms="40685" started-at="2019-11-11T21:27:15 EST" finished-at="2019-11-11T21:27:56 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopDockerDeleteFile -->
+      </class> <!-- remoteTesting.dockerValidation.chromeTest1 -->
+      <class name="remoteTesting.dockerValidation.chromeTest2">
+        <test-method status="PASS" signature="test2()[pri:0, instance:remoteTesting.dockerValidation.chromeTest2@3dd4520b]" name="test2" duration-ms="86495" started-at="2019-11-11T21:25:48 EST" finished-at="2019-11-11T21:27:15 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+      </class> <!-- remoteTesting.dockerValidation.chromeTest2 -->
+      <class name="remoteTesting.dockerValidation.chromeTest3">
+        <test-method status="PASS" signature="test3()[pri:0, instance:remoteTesting.dockerValidation.chromeTest3@5ae63ade]" name="test3" duration-ms="47654" started-at="2019-11-11T21:25:48 EST" finished-at="2019-11-11T21:26:36 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+      </class> <!-- remoteTesting.dockerValidation.chromeTest3 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

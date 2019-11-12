@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 
 public class startDocker {
 	
-	@Test
 	public void startFile() throws IOException, InterruptedException
 	{		
 		Runtime runtime = Runtime.getRuntime();
@@ -20,7 +19,7 @@ public class startDocker {
 		boolean flag = false;
 		
 		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.SECOND, 70);
+		cal.add(Calendar.SECOND, 80);
 		Long stopNow = cal.getTimeInMillis();
 		Thread.sleep(3000);
 		
@@ -38,7 +37,7 @@ public class startDocker {
 			{
 				if (currentLine.contains("registered to the hub and ready to use"))
 				{
-					System.out.println("Found the text");
+					System.out.println("Server up and running");
 					flag = true;
 					break;
 				}
@@ -47,18 +46,12 @@ public class startDocker {
 			reader.close();
 		}
 		
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		Assert.assertTrue(flag);
 		
-		// server now confirmed to be started
-		// time to scale up instances of chrome
 		runtime.exec("cmd /c start scale.bat");
 				
 		Thread.sleep(15000);
-		
-		
-		
-		
 	}
 	
 	

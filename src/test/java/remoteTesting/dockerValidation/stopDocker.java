@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class stopDocker {
 
 	@Test
-	public void startFile() throws IOException, InterruptedException
+	public void stopFile() throws IOException, InterruptedException
 	{		
 		Runtime runtime = Runtime.getRuntime();
 		runtime.exec("cmd /c start dockerDown.bat");
@@ -21,7 +21,7 @@ public class stopDocker {
 		boolean flag = false;
 		
 		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.SECOND, 70);
+		cal.add(Calendar.SECOND, 80);
 		Long stopNow = cal.getTimeInMillis();
 		Thread.sleep(3000);
 		
@@ -37,7 +37,7 @@ public class stopDocker {
 			
 			while (currentLine != null && !flag)
 			{
-				if (currentLine.contains("Shutdown complete"))
+				if (currentLine.contains("selenium-hub exited"))
 				{
 					System.out.println("Found the server shutdown text");
 					flag = true;
@@ -48,7 +48,7 @@ public class stopDocker {
 			reader.close();
 		}
 		
-		Thread.sleep(25000);
+		Thread.sleep(18000);
 		Assert.assertTrue(flag);
 		
 		File fi = new File("output.txt");
