@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.Calendar;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class startDocker {
 	
@@ -19,7 +18,7 @@ public class startDocker {
 		boolean flag = false;
 		
 		Calendar cal = Calendar.getInstance();
-		cal.add(Calendar.SECOND, 80);
+		cal.add(Calendar.SECOND, 180);
 		Long stopNow = cal.getTimeInMillis();
 		Thread.sleep(3000);
 		

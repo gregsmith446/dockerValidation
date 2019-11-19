@@ -7,11 +7,9 @@ import java.io.IOException;
 import java.util.Calendar;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class stopDocker {
 
-	@Test
 	public void stopFile() throws IOException, InterruptedException
 	{		
 		Runtime runtime = Runtime.getRuntime();
